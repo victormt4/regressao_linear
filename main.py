@@ -29,3 +29,11 @@ ax_boxplot.set_ylabel('Litros', fontsize=12)
 ax_boxplot.set_xlabel('Final de Semana', fontsize=12)
 
 plt.show()
+
+# Distribuição de frequências da variável dependente (y)
+ax_distplot = sns.distplot(dataset['consumo'])
+ax_distplot.figure.set_size_inches(12, 6)
+ax_distplot.set_title('Distribuição de Frequências', fontsize=14)
+ax_distplot.set_ylabel('Consumo de Cerveja (Litros)', fontsize=12)
+
+plt.show()
