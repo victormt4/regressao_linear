@@ -48,3 +48,14 @@ ax_pairplot = sns.pairplot(dataset, y_vars='consumo', x_vars=['temp_min', 'temp_
                            kind='reg')
 ax_pairplot.fig.suptitle('Dispersão entre as Variáveis', y=1.05)
 plt.show()
+
+ax_joinplot = sns.jointplot(x='temp_max', y='consumo', data=dataset, kind='reg')
+ax_joinplot.fig.suptitle('Dispersão - Consumo x Temperatura')
+ax_joinplot.set_axis_labels('Temperatura Máxima', 'Consumo de Cerveja')
+plt.show()
+
+ax_lmplot = sns.lmplot(x='temp_max', y='consumo', data=dataset, hue='fds', markers=['o', '*'], legend=False)
+ax_lmplot.fig.suptitle('Reta de Regressão - Consumo x Temperatura x Final de Semana')
+ax_lmplot.set_axis_labels('Temperatura Máxima (ºC)', 'Consumo de Cerveja (litros)')
+ax_lmplot.add_legend(title='Fim de semana')
+plt.show()
