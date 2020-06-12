@@ -37,3 +37,14 @@ ax_distplot.set_title('Distribuição de Frequências', fontsize=14)
 ax_distplot.set_ylabel('Consumo de Cerveja (Litros)', fontsize=12)
 
 plt.show()
+
+# Visualizando a correlação entre as variáveis
+ax_pairplot = sns.pairplot(dataset, y_vars='consumo', x_vars=['temp_min', 'temp_media', 'temp_max', 'chuva', 'fds'])
+ax_pairplot.fig.suptitle('Dispersão entre as Variáveis', y=1.05)
+plt.show()
+
+# o atributo kind='reg' traça uma reta de regressão
+ax_pairplot = sns.pairplot(dataset, y_vars='consumo', x_vars=['temp_min', 'temp_media', 'temp_max', 'chuva', 'fds'],
+                           kind='reg')
+ax_pairplot.fig.suptitle('Dispersão entre as Variáveis', y=1.05)
+plt.show()
