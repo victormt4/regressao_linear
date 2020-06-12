@@ -26,4 +26,5 @@ print(f'R² = {model.score(X_train, y_train).round(2)}')
 # Gerando previsões
 y_preview = model.predict(X_test)
 
+# Obtendo R² da previsão
 print(f'R² = {metrics.r2_score(y_test, y_preview).round(2)}')
