@@ -27,4 +27,15 @@ print(f'R² = {model.score(X_train, y_train).round(2)}')
 y_preview = model.predict(X_test)
 
 # Obtendo R² da previsão
-print(f'R² = {metrics.r2_score(y_test, y_preview).round(2)}')
+print(f'R² = {metrics.r2_score(y_test, y_preview).round(2)}\n')
+
+# Gerando previsão pontual
+X_input = X_test[0:1]
+print(f'Consumo previsto: {model.predict(X_input)[0].round(2)} litros')
+
+# Simulando dados
+temp_max = 40
+chuva = 0
+fds = 1
+X_input = [[temp_max, chuva, fds]]
+print(f'Consumo previsto: {model.predict(X_input)[0].round(2)} litros')
