@@ -33,8 +33,8 @@ REQM = np.sqrt(EQM).round(2)
 EQM_2 = metrics.mean_squared_error(y2_test, y2_preview)
 REQM_2 = np.sqrt(EQM_2).round(2)
 
-# R² - Quanto mais próximo de 1, melhor
-# EQM e REQM, quando menor, melhor
+# R² - Quanto mais próximo de 1, melhor (mais adequado ao modelo)
+# EQM e REQM, quando menor, melhor (menos erros)
 metrics_temp_max = pd.DataFrame([EQM, REQM, R2], ['EQM', 'REQM', 'R²'], columns=['Métricas - Temp Máxima'])
 metrics_temp_media = pd.DataFrame([EQM_2, REQM_2, R2_2], ['EQM', 'REQM', 'R²'], columns=['Métricas - Temp Média'])
 
