@@ -1,6 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from gerando_modelo import get_model
+from gerador_modelo import get_model
 
 model, X_train, X_test, y_train, y_test = get_model(['temp_max', 'chuva', 'fds'])
 

@@ -1,7 +1,7 @@
 from sklearn import metrics
 import pandas as pd
 import numpy as np
-from gerando_modelo import get_model
+from gerador_modelo import get_model
 
 model, X_train, X_test, y_train, y_test = get_model(['temp_max', 'chuva', 'fds'])
 model_2, X2_train, X2_test, y2_train, y2_test = get_model(['temp_media', 'chuva', 'fds'])
